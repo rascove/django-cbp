@@ -4,12 +4,12 @@ from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView,
 
 urlpatterns =[
     path('', views.home, name='itreporting-home'),
-    path('about', views.about, name='itreporting-about'),
+    path('about/', views.about, name='itreporting-about'),
     path('report/', PostListView.as_view(), name='itreporting-report'),
     path('issue/<int:pk>', PostDetailView.as_view(), name='issue-detail'),
     path('issue/new/', PostCreateView.as_view(), name='issue-create'),
     path('issue/<int:pk>/update/', PostUpdateView.as_view(), name='issue-update'),
     path('issue/<int:pk>/delete/', PostDeleteView.as_view(), name='issue-delete'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-issues'),
-    path('contact', views.contact, name='itreporting-contact'),
+    path('contact/', views.contact, name='itreporting-contact'),
 ]
