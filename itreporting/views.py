@@ -70,4 +70,4 @@ class UserPostListView(ListView):
     def get_queryset(self):
         user = get_object_or_404(User,
         username = self.kwargs.get('username'))
-        return Issue.objects.filter(author=user).order_by('-date_submitted')
+        return Issue.objects.filter(author = user).order_by('-date_submitted')

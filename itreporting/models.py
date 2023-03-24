@@ -15,4 +15,4 @@ class Issue(models.Model):
         return self.type
 
     def get_absolute_url(self):
-        return reverse('issue-detail', kwargs={'pk': self.pk})
+        return reverse('issue-detail', kwargs = {'pk': self.pk})
